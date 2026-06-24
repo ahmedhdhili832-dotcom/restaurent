@@ -385,6 +385,8 @@ header.sticky {
     align-items: center;
     font-size: 1.2rem;
     transition: var(--transition);
+    border: none;
+    cursor: pointer;
 }
 
 .price a:hover {
@@ -656,6 +658,246 @@ footer .fab {
 }
 
 /* ===========================
+   CART SYSTEM STYLES
+   =========================== */
+
+.cart-badge {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #FF6B35, #FF5520);
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    box-shadow: 0 10px 30px rgba(255, 107, 53, 0.3);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.cart-badge:hover {
+    transform: scale(1.1);
+    box-shadow: 0 15px 40px rgba(255, 107, 53, 0.4);
+}
+
+.cart-count {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background: #004E89;
+    color: white;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+/* ===========================
+   MODAL STYLES
+   =========================== */
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    animation: fadeInModal 0.3s ease;
+}
+
+.modal-content {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    max-width: 400px;
+    width: 90%;
+    position: relative;
+    animation: slideInModal 0.3s ease;
+}
+
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: #F8F9FA;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.close-btn:hover {
+    background: #FF6B35;
+    color: white;
+    transform: rotate(90deg);
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+    border-bottom: 1px solid #F8F9FA;
+    margin: 8px 0;
+    font-weight: 500;
+}
+
+.remove-btn {
+    background: #FF6B35;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: bold;
+}
+
+.remove-btn:hover {
+    background: #004E89;
+    transform: scale(1.1);
+}
+
+.cart-total {
+    padding: 15px;
+    background: #F8F9FA;
+    border-radius: 8px;
+    margin: 15px 0;
+    text-align: center;
+    color: #FF6B35;
+    font-size: 1.2rem;
+}
+
+.checkout-btn, .clear-cart-btn {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    margin: 8px 0;
+    transition: all 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+}
+
+.checkout-btn {
+    background: #FF6B35;
+    color: white;
+}
+
+.checkout-btn:hover {
+    background: #FF5520;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(255, 107, 53, 0.3);
+}
+
+.clear-cart-btn {
+    background: #F8F9FA;
+    color: #666;
+}
+
+.clear-cart-btn:hover {
+    background: #E0E0E0;
+    transform: translateY(-2px);
+}
+
+/* ===========================
+   NOTIFICATION STYLES
+   =========================== */
+
+.notification {
+    position: fixed;
+    top: 80px;
+    right: 20px;
+    background: linear-gradient(135deg, #FF6B35, #FF5520);
+    color: white;
+    padding: 15px 25px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    z-index: 10000;
+    max-width: 350px;
+    line-height: 1.5;
+    animation: slideIn 0.3s ease;
+    word-wrap: break-word;
+}
+
+/* ===========================
+   ANIMATIONS
+   =========================== */
+
+@keyframes slideIn {
+    from {
+        transform: translateX(400px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideOut {
+    from {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateX(400px);
+        opacity: 0;
+    }
+}
+
+@keyframes fadeInModal {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInModal {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeInUp 0.6s ease;
+}
+
+/* ===========================
    RESPONSIVE DESIGN
    =========================== */
 
@@ -731,6 +973,20 @@ footer .fab {
 
     .footer-content {
         grid-template-columns: 1fr;
+    }
+
+    #cart-icon {
+        bottom: 20px !important;
+        right: 20px !important;
+    }
+
+    .modal-content {
+        max-width: 90%;
+    }
+
+    .notification {
+        max-width: 90%;
+        right: 10px;
     }
 }
 
@@ -813,6 +1069,24 @@ footer .fab {
     .reservation h2 {
         font-size: 1.5rem;
     }
+
+    .cart-badge {
+        width: 50px;
+        height: 50px;
+        font-size: 1.2rem;
+    }
+
+    .modal-content {
+        padding: 20px;
+        max-width: 95%;
+    }
+
+    .notification {
+        top: 70px;
+        max-width: 95%;
+        padding: 12px 20px;
+        font-size: 0.9rem;
+    }
 }
 
 /* ===========================
@@ -827,18 +1101,10 @@ footer .fab {
     }
 }
 
-/* Loading animation */
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.fade-in {
-    animation: fadeInUp 0.6s ease;
+/* Focus styles for accessibility */
+button:focus,
+input:focus,
+a:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
 }
