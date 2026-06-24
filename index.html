@@ -3,7 +3,20 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Foodie | Premium Restaurant</title>
+<meta name="description" content="Foodie - Premium Restaurant featuring fresh ingredients, professional chefs, and unforgettable flavors. Order now or reserve your table!">
+<meta name="keywords" content="restaurant, food, menu, reservation, burger, pizza, pasta, tacos">
+<meta name="author" content="Foodie Restaurant">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Foodie | Premium Restaurant">
+<meta property="og:description" content="Taste the best food in town. Fresh ingredients, professional chefs, unforgettable flavors.">
+<meta property="og:image" content="images/Pasta.png">
+
+<!-- Favicon -->
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='75' font-size='75' fill='%23FF6B35'>🍽️</text></svg>">
+
+<title>Foodie | Premium Restaurant - Order Online & Reserve Table</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,10 +32,10 @@
 
 <!-- NAVBAR -->
 <header>
-<nav class="navbar">
+<nav class="navbar" role="navigation" aria-label="Main navigation">
 
-<div class="logo">
-<i class="fa-solid fa-utensils"></i> Foodie
+<div class="logo" aria-label="Foodie Restaurant">
+<i class="fa-solid fa-utensils" aria-hidden="true"></i> Foodie
 </div>
 
 <ul class="nav-links">
@@ -33,13 +46,13 @@
 <li><a href="#reservation">Contact</a></li>
 </ul>
 
-<a href="#" class="btn">Book Table</a>
+<a href="#reservation" class="btn" aria-label="Book a table at Foodie">Book Table</a>
 
 </nav>
 </header>
 
 <!-- HERO -->
-<section class="hero" id="home">
+<section class="hero" id="home" aria-label="Welcome to Foodie">
 
 <div class="hero-text">
 <span>Premium Restaurant</span>
@@ -49,29 +62,48 @@
 <p>Fresh ingredients, professional chefs, and unforgettable flavors crafted just for you.</p>
 
 <div class="hero-buttons">
-<a href="#" class="btn">Order Now</a>
-<a href="#menu" class="btn-outline">View Menu</a>
+<a href="#menu" class="btn" aria-label="Order now">Order Now</a>
+<a href="#menu" class="btn-outline" aria-label="View our menu">View Menu</a>
 </div>
 </div>
 
 <div class="hero-image">
-<img src="images/Pasta.png" alt="Delicious pasta dish">
+<img src="images/Pasta.png" alt="Delicious creamy pasta dish prepared by our professional chefs">
 </div>
 
 </section>
 
 <!-- FEATURES -->
-<section class="features">
+<section class="features" aria-label="Our restaurant features">
 
-<div class="feature"><i class="fa-solid fa-truck-fast"></i><h3>Fast Delivery</h3><p>Hot & fresh</p></div>
-<div class="feature"><i class="fa-solid fa-seedling"></i><h3>Fresh</h3><p>Organic food</p></div>
-<div class="feature"><i class="fa-solid fa-user-chef"></i><h3>Chefs</h3><p>Professional cooking</p></div>
-<div class="feature"><i class="fa-solid fa-star"></i><h3>Quality</h3><p>Top taste</p></div>
+<div class="feature">
+<i class="fa-solid fa-truck-fast" aria-hidden="true"></i>
+<h3>Fast Delivery</h3>
+<p>Hot & fresh food delivered quickly</p>
+</div>
+
+<div class="feature">
+<i class="fa-solid fa-seedling" aria-hidden="true"></i>
+<h3>Fresh Ingredients</h3>
+<p>100% Organic & locally sourced</p>
+</div>
+
+<div class="feature">
+<i class="fa-solid fa-user-chef" aria-hidden="true"></i>
+<h3>Expert Chefs</h3>
+<p>Professional cooking with passion</p>
+</div>
+
+<div class="feature">
+<i class="fa-solid fa-star" aria-hidden="true"></i>
+<h3>Premium Quality</h3>
+<p>Top taste & excellence in every dish</p>
+</div>
 
 </section>
 
 <!-- MENU -->
-<section class="menu" id="menu">
+<section class="menu" id="menu" aria-label="Our popular dishes">
 
 <div class="section-title">
 <h2>Popular Dishes</h2>
@@ -79,32 +111,32 @@
 
 <div class="menu-container">
 
-<div class="card">
-<img src="images/Burger.jpg" alt="Burger dish">
-<h3>Burger</h3>
-<p>Juicy beef burger</p>
-<div class="price">$14 <a href="#"><i class="fa fa-cart-plus"></i></a></div>
+<div class="card" role="article">
+<img src="images/Burger.jpg" alt="Delicious juicy beef burger with fresh toppings">
+<h3>Classic Burger</h3>
+<p>Juicy beef burger with cheddar cheese</p>
+<div class="price">$14 <a href="#" aria-label="Add burger to cart"><i class="fa fa-cart-plus" aria-hidden="true"></i></a></div>
 </div>
 
-<div class="card">
-<img src="images/Pizza.jpg" alt="Pizza dish">
-<h3>Pizza</h3>
-<p>Cheesy pizza</p>
-<div class="price">$19 <a href="#"><i class="fa fa-cart-plus"></i></a></div>
+<div class="card" role="article">
+<img src="images/Pizza.jpg" alt="Cheesy pizza with fresh basil and mozzarella">
+<h3>Margherita Pizza</h3>
+<p>Traditional cheesy pizza with tomato base</p>
+<div class="price">$19 <a href="#" aria-label="Add pizza to cart"><i class="fa fa-cart-plus" aria-hidden="true"></i></a></div>
 </div>
 
-<div class="card">
-<img src="images/Pasta.png" alt="Pasta dish">
-<h3>Pasta</h3>
-<p>Cream pasta</p>
-<div class="price">$16 <a href="#"><i class="fa fa-cart-plus"></i></a></div>
+<div class="card" role="article">
+<img src="images/Pasta.png" alt="Creamy pasta carbonara with fresh ingredients">
+<h3>Creamy Pasta</h3>
+<p>Rich cream pasta with Italian herbs</p>
+<div class="price">$16 <a href="#" aria-label="Add pasta to cart"><i class="fa fa-cart-plus" aria-hidden="true"></i></a></div>
 </div>
 
-<div class="card">
-<img src="images/Tacos.jpg" alt="Tacos dish">
-<h3>Tacos</h3>
-<p>Mexican tacos</p>
-<div class="price">$17 <a href="#"><i class="fa fa-cart-plus"></i></a></div>
+<div class="card" role="article">
+<img src="images/Tacos.jpg" alt="Authentic Mexican tacos with fresh vegetables">
+<h3>Mexican Tacos</h3>
+<p>Authentic Mexican tacos with fresh salsa</p>
+<div class="price">$17 <a href="#" aria-label="Add tacos to cart"><i class="fa fa-cart-plus" aria-hidden="true"></i></a></div>
 </div>
 
 </div>
@@ -112,76 +144,76 @@
 </section>
 
 <!-- ABOUT -->
-<section class="about" id="about">
+<section class="about" id="about" aria-label="About Foodie restaurant">
 
 <div class="about-image">
-<img src="images/Pizza.jpg" alt="Chef preparing food">
+<img src="images/Pizza.jpg" alt="Our professional chef preparing authentic Italian pizza">
 </div>
 
 <div class="about-content">
 <span>About Us</span>
 <h2>We Cook With Love</h2>
-<p>Premium food made by expert chefs.</p>
-<a class="btn">Read More</a>
+<p>At Foodie, we believe that every dish tells a story. Our premium food is handcrafted by expert chefs using the finest ingredients. We're committed to delivering an unforgettable dining experience that celebrates flavor, quality, and passion in every bite.</p>
+<a href="#reservation" class="btn">Reserve Now</a>
 </div>
 
 </section>
 
 <!-- GALLERY -->
-<section class="gallery" id="gallery">
+<section class="gallery" id="gallery" aria-label="Food gallery with photos and videos">
 
 <h2>Food Gallery</h2>
 
 <div class="gallery-grid">
 
-<div class="media-card">
-<img src="images/Burger.jpg" alt="Burger photo">
-<div class="media-caption">Burger</div>
+<div class="media-card" role="img" aria-label="Photo of our classic burger">
+<img src="images/Burger.jpg" alt="Professional photo of our signature burger dish">
+<div class="media-caption">Our Signature Burger</div>
 </div>
 
-<div class="media-card">
-<video controls preload="metadata" poster="images/Burger.jpg" src="vedio/burger.mp4"></video>
-<div class="media-caption">Burger preparation</div>
+<div class="media-card" role="img" aria-label="Video of burger preparation">
+<video controls preload="metadata" poster="images/Burger.jpg" src="video/burger.mp4" aria-label="Burger preparation video"></video>
+<div class="media-caption">Burger Preparation</div>
 </div>
 
-<div class="media-card">
-<img src="images/Pizza.jpg" alt="Pizza photo">
-<div class="media-caption">Pizza</div>
+<div class="media-card" role="img" aria-label="Photo of our homemade pizza">
+<img src="images/Pizza.jpg" alt="Fresh homemade pizza with premium toppings">
+<div class="media-caption">Homemade Pizza</div>
 </div>
 
-<div class="media-card">
-<video controls preload="metadata" poster="images/Pizza.jpg" src="vedio/pizza.mp4"></video>
-<div class="media-caption">Pizza making</div>
+<div class="media-card" role="img" aria-label="Video of pizza making process">
+<video controls preload="metadata" poster="images/Pizza.jpg" src="video/pizza.mp4" aria-label="Pizza making video"></video>
+<div class="media-caption">Pizza Making</div>
 </div>
 
-<div class="media-card">
-<img src="images/Pasta.png" alt="Pasta photo">
-<div class="media-caption">Pasta</div>
+<div class="media-card" role="img" aria-label="Photo of our creamy pasta dish">
+<img src="images/Pasta.png" alt="Beautifully plated creamy pasta carbonara">
+<div class="media-caption">Creamy Pasta</div>
 </div>
 
-<div class="media-card">
-<video controls preload="metadata" poster="images/Pasta.png" src="vedio/pasta1.mp4"></video>
-<div class="media-caption">Pasta cooking</div>
+<div class="media-card" role="img" aria-label="Video of pasta cooking process">
+<video controls preload="metadata" poster="images/Pasta.png" src="video/pasta1.mp4" aria-label="Pasta cooking video"></video>
+<div class="media-caption">Pasta Cooking</div>
 </div>
 
-<div class="media-card">
-<img src="images/Tacos.jpg" alt="Tacos photo">
-<div class="media-caption">Tacos</div>
+<div class="media-card" role="img" aria-label="Photo of authentic Mexican tacos">
+<img src="images/Tacos.jpg" alt="Authentic Mexican tacos with fresh cilantro">
+<div class="media-caption">Mexican Tacos</div>
 </div>
 
-<div class="media-card">
-<video controls preload="metadata" poster="images/Tacos.jpg" src="vedio/tacos.mp4"></video>
-<div class="media-caption">Tacos showcase</div>
+<div class="media-card" role="img" aria-label="Video of tacos preparation">
+<video controls preload="metadata" poster="images/Tacos.jpg" src="video/tacos.mp4" aria-label="Tacos preparation video"></video>
+<div class="media-caption">Tacos Preparation</div>
 </div>
 
-<div class="media-card">
-<video controls preload="metadata" poster="images/Pizza.jpg" src="vedio/grill1.mp4"></video>
-<div class="media-caption">Grill specialties</div>
+<div class="media-card" role="img" aria-label="Video of grill specialties">
+<video controls preload="metadata" poster="images/Pizza.jpg" src="video/grill1.mp4" aria-label="Grill specialties video"></video>
+<div class="media-caption">Grill Specialties</div>
 </div>
 
-<div class="media-card">
-<video controls preload="metadata" poster="images/Pasta.png" src="vedio/steak.mp4"></video>
-<div class="media-caption">Steak highlight</div>
+<div class="media-card" role="img" aria-label="Video of premium steak preparation">
+<video controls preload="metadata" poster="images/Pasta.png" src="video/steak.mp4" aria-label="Premium steak video"></video>
+<div class="media-caption">Premium Steak</div>
 </div>
 
 </div>
@@ -189,70 +221,72 @@
 </section>
 
 <!-- TESTIMONIALS -->
-<section class="testimonials">
+<section class="testimonials" aria-label="Customer testimonials">
 
 <h2>Happy Customers</h2>
 
-<div class="testimonial">
+<div class="testimonial" role="article">
 <p>★★★★★</p>
-<p>Best restaurant ever</p>
+<p>"Best restaurant ever! The food quality is incredible and the service is outstanding. Highly recommend!"</p>
 <h4>John Smith</h4>
 </div>
 
 </section>
 
 <!-- RESERVATION -->
-<section class="reservation" id="reservation">
+<section class="reservation" id="reservation" aria-label="Reserve your table">
 
-<h2>Reserve Table</h2>
+<h2>Reserve Your Table</h2>
 
-<form>
-<input placeholder="Name">
-<input placeholder="Email">
-<input type="date">
-<input type="time">
-<button>Book Now</button>
+<form aria-label="Reservation form" id="reservationForm">
+<input type="text" placeholder="Full Name" required aria-label="Enter your full name">
+<input type="email" placeholder="Email Address" required aria-label="Enter your email address">
+<input type="date" required aria-label="Select reservation date">
+<input type="time" required aria-label="Select reservation time">
+<button type="submit" aria-label="Submit reservation">Book Now</button>
 </form>
 
 </section>
 
 <!-- FOOTER -->
-<footer>
+<footer role="contentinfo">
 
 <div class="footer-content">
 
 <div>
-<h3>Foodie</h3>
-<p>Premium restaurant</p>
+<h3>Foodie Restaurant</h3>
+<p>Premium restaurant with passion for quality food</p>
 </div>
 
 <div>
-<h3>Links</h3>
+<h3>Quick Links</h3>
 <a href="#home">Home</a>
 <a href="#menu">Menu</a>
 <a href="#gallery">Gallery</a>
+<a href="#reservation">Contact</a>
 </div>
 
 <div>
-<h3>Contact</h3>
-<p>+216 00 000 000</p>
-<p>foodie@email.com</p>
+<h3>Contact Info</h3>
+<p>📞 +216 25 123 456</p>
+<p>📧 contact@foodie.com</p>
+<p>📍 Downtown, Tunis</p>
 </div>
 
 <div>
-<h3>Social</h3>
-<i class="fab fa-facebook"></i>
-<i class="fab fa-instagram"></i>
+<h3>Follow Us</h3>
+<a href="https://facebook.com" target="_blank" aria-label="Visit our Facebook page"><i class="fab fa-facebook"></i></a>
+<a href="https://instagram.com" target="_blank" aria-label="Visit our Instagram page"><i class="fab fa-instagram"></i></a>
+<a href="https://twitter.com" target="_blank" aria-label="Visit our Twitter page"><i class="fab fa-twitter"></i></a>
 </div>
 
 </div>
 
-<p class="copyright">© 2026 Foodie</p>
+<p class="copyright">© 2026 Foodie Restaurant. All rights reserved.</p>
 
 </footer>
 
 <script src="script.js"></script>
 
 </body>
-</html> 
-
+</html>
